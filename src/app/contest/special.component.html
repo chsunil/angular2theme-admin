@@ -1,0 +1,24 @@
+<div class="animated fadeIn">
+    <div class="col-md-2 pull-right"><button class="btn btn-primary btn-sm" type="button">Create New Contest</button></div>
+    <div class="col-md-12">
+        <div style="margin: auto; max-width: 1000px; margin-top:50px">
+            <data-table id="films-grid" headerTitle="All Main Contests" [items]="films" [itemCount]="filmCount" (reload)="reloadFilms($event)" 
+                [sortBy]="'nextruns'" [sortAsc]="false" [selectColumn]="true" [multiSelect]="false" [substituteRows]="false" [expandableRows]="true"
+                [translations]="translations"  [selectOnRowClick]="true">
+                <template #dataTableExpand let-item="item">
+                    <div [textContent]="item.description" style="padding: 5px; color: gray"></div>
+                </template>
+                <data-table-column [property]="'cname'" [header]="'Contest Name'" [sortable]="true"  [sortable]="true" [cellColors]="cellColor">
+                </data-table-column>
+                <data-table-column [property]="'cat'" [header]="'Categories'" [sortable]="true">
+                </data-table-column>
+                <data-table-column [property]="'nextruns'" [header]="'Date (Next Runs)'" [sortable]="true">
+                </data-table-column>
+                <data-table-column [property]="'actions'" [header]="'Actions'">
+                  
+                </data-table-column>
+                </data-table>
+                
+        </div>
+    </div>
+</div>
