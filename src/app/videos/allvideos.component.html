@@ -1,0 +1,30 @@
+<div class="animated fadeIn">
+    <!--<div class="col-md-2 pull-right">
+    <button class="btn btn-primary btn-sm" type="button">All Videos</button></div>-->
+    <div class="col-md-12">
+        <div style="margin: auto; max-width: 1000px; margin-top:50px">
+           
+            <data-table id="films-grid" headerTitle="All Videos"  [items]="films" [itemCount]="filmCount" (reload)="reloadFilms($event)" 
+                [sortBy]="'roles'" [sortAsc]="false" [selectColumn]="true" [multiSelect]="false" [substituteRows]="false" [expandableRows]="true"
+                [translations]="translations"  [selectOnRowClick]="true">               
+                <template #dataTableExpand let-item="item">
+                    
+                     <div [textContent]="item.follows" style="padding: 5px; color: gray"></div>
+                     <div [textContent]="item.shares" style="padding: 5px; color: gray"></div>
+                     <div [textContent]="item.favorites" style="padding: 5px; color: gray"></div>
+                     <div [textContent]="item.comments" style="padding: 5px; color: gray"></div>
+                          </template>
+                <data-table-column [property]="'vtitle'" [header]="'Video Title'" [sortable]="true"  [sortable]="true" [cellColors]="cellColor">
+                </data-table-column>
+                <data-table-column [property]="'user'" [header]="'User'" [sortable]="true">
+                </data-table-column>
+                <data-table-column [property]="'date'" [header]="'Date'" [sortable]="true">
+                </data-table-column>
+                <data-table-column [property]="'actions'" [header]="'Action'">
+                  
+                </data-table-column>
+                </data-table>
+                
+        </div>
+    </div>
+</div>

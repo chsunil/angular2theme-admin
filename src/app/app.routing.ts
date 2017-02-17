@@ -66,6 +66,32 @@ export const routes: Routes = [
       }
     ]
   },
+   {
+    path: 'users',
+    component: FullLayoutComponent,
+    data: {
+      title: 'users'
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './users/users.module#UsersModule',
+      }
+    ]
+  },
+   {
+    path: 'videos',
+    component: FullLayoutComponent,
+    data: {
+      title: 'videos'
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './videos/videos.module#VideosModule',
+      }
+    ]
+  },
   {
     path: 'contest',
     component: FullLayoutComponent,
@@ -76,6 +102,19 @@ export const routes: Routes = [
       {
         path: '',
         loadChildren: './contest/contest.module#ContestModule',
+      }
+    ]
+  },
+  {
+    path: 'email',
+    component: FullLayoutComponent,
+    data: {
+      title: 'email'
+    },
+    children: [
+      {
+        path: '',
+        loadChildren: './email/email.module#EmailModule',
       }
     ]
   }

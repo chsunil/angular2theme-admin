@@ -8,7 +8,7 @@ import { WinnersComponent } from './winners.component';
 import { ContestRoutingModule } from './contest-routing.module';
 import { DataTableModule } from 'angular-2-data-table';
 @NgModule({
-  imports: [  ContestRoutingModule,DataTableModule ],
+  imports: [  ContestRoutingModule ],
   declarations: [
     MainComponent,
     SpecialComponent,

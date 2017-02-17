@@ -13,7 +13,7 @@ const routes: Routes = [
     },
     children: [
       {
-        path: 'users',
+        path: 'allusers',
         component: AllusersComponent,
         data: {
           title: 'All Users'

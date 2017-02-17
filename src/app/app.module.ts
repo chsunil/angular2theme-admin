@@ -18,6 +18,9 @@ import { AppRoutingModule } from './app.routing';
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
+// Import Angular2 plugin.
+import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
+
 
 @NgModule({
   imports: [
@@ -26,7 +29,9 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
     
     DropdownModule.forRoot(),
     TabsModule.forRoot(),
-    ChartsModule
+    ChartsModule,
+    FroalaEditorModule.forRoot(),
+    FroalaViewModule.forRoot()
     
   ],
   declarations: [
@@ -44,4 +49,5 @@ import { SimpleLayoutComponent } from './layouts/simple-layout.component';
   }],
   bootstrap: [ AppComponent ]
 })
+
 export class AppModule { }

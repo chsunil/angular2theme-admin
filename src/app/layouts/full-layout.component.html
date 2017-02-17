@@ -122,10 +122,28 @@
                     <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-users"></i> Users</a>
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
-                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/users/allusers']"> Users</a>
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/users/allusers']"> All Users</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" routerLinkActive="active" [routerLink]="['/users/adduser']">Create User</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- videos pages -->
+                 <li class="nav-item nav-dropdown" routerLinkActive="open">
+                    <a class="nav-link nav-dropdown-toggle" href="#"><i class="fa fa-video-camera"></i> Videos</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/videos/allvideos']"> All Videos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/videos/videoscat']">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/videos/videocomments']">Comments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/videos/videosetting']">Settings</a>
                         </li>
                     </ul>
                 </li>
@@ -167,6 +185,23 @@
                         <li class="nav-item">
                             <a class="nav-link" routerLinkActive="active" [routerLink]="['/settings/language']">  Language</a>
                         </li>
+                    </ul>
+                </li>
+
+                 <!-- Email Templates page -->
+                <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#"> <i class="fa fa-envelope-open-o" aria-hidden="true"></i> Email Templates</a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/register']"> Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/forgotpassword']">  Forgotpassword</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/passwordchange']">  Password change</a>
+                        </li>
+                        
                     </ul>
                 </li>
 

@@ -26,6 +26,7 @@
     "@angular/router": "3.4.6",
     "@angular/upgrade": "2.4.6",
     "angular-2-data-table": "^0.1.2",
+    "angular2-froala-wysiwyg": "^2.4.2-2",
     "chart.js": "2.4.0",
     "core-js": "2.4.1",
     "glyphicons": "^0.2.0",
