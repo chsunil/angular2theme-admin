@@ -3,7 +3,7 @@
         <div class="col-sm-6 col-lg-3">
             <div class="card card-inverse card-primary">
                 <div class="card-block pb-0">
-                    
+                    <i class="fa fa-eye float-right"></i>
                     <h4 class="mb-0">40 886,200</h4>
                     <p>Views</p>
                 </div>
@@ -16,11 +16,9 @@
         <div class="col-sm-6 col-lg-3">
             <div class="card card-inverse card-info">
                 <div class="card-block pb-0">
-                    <button type="button" class="btn btn-transparent p-0 float-right">
-                        <i class="icon-location-pin"></i>
-                    </button>
-                    <h4 class="mb-0">9.823</h4>
-                    <p>Members online</p>
+                    <i class="fa fa-upload pull-right"></i>
+                    <h4 class="mb-0">275,800</h4>
+                    <p>Uploads</p>
                 </div>
                 <div class="chart-wrapper px-1" style="height:70px;">
                     <canvas baseChart class="chart" [datasets]="lineChart2Data" [labels]="lineChart2Labels" [options]="lineChart2Options" [colors]="lineChart2Colours" [legend]="lineChart2Legend" [chartType]="lineChart2Type" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
@@ -31,9 +29,9 @@
         <div class="col-sm-6 col-lg-3">
             <div class="card card-inverse card-warning">
                 <div class="card-block pb-0">
-                   
-                    <h4 class="mb-0">9.823</h4>
-                    <p>Members online</p>
+                   <i class="fa fa-line-chart pull-right"></i>
+                    <h4 class="mb-0">74.8%</h4>
+                    <p>Bounce Rate</p>
                 </div>
                 <div class="chart-wrapper" style="height:70px;">
                     <canvas baseChart class="chart" [datasets]="lineChart3Data" [labels]="lineChart3Labels" [options]="lineChart3Options" [colors]="lineChart3Colours" [legend]="lineChart3Legend" [chartType]="lineChart3Type" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
@@ -44,9 +42,9 @@
         <div class="col-sm-6 col-lg-3">
             <div class="card card-inverse card-danger">
                 <div class="card-block pb-0">
-                   
-                    <h4 class="mb-0">9.823</h4>
-                    <p>Members online</p>
+                   <i class="fa fa-calendar pull-right"></i>
+                    <h4 class="mb-0">00:11:03</h4>
+                    <p>Avg. Session Duration</p>
                 </div>
                 <div class="chart-wrapper px-1" style="height:70px;">
                     <canvas baseChart class="chart" [datasets]="barChart1Data" [labels]="barChart1Labels" [options]="barChart1Options" [colors]="barChart1Colours" [legend]="barChart1Legend" [chartType]="barChart1Type" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
@@ -61,12 +59,11 @@
             <div class="row">
                 <div class="col-sm-5">
                     <h4 class="card-title mb-0">Traffic</h4>
-                    <div class="small text-muted">November 2015</div>
+                    <div class="small text-muted">January 2016</div>
                 </div>
                 <!--/.col-->
                 <div class="col-sm-7 hidden-sm-down">
-                    <button type="button" class="btn btn-primary float-right"><i class="icon-cloud-download"></i>
-                    </button>
+                  
                     <div class="btn-toolbar float-right" role="toolbar" aria-label="Toolbar with button groups">
                         <div class="btn-group mr-1" data-toggle="buttons" aria-label="First group">
                             <label class="btn btn-outline-secondary">
@@ -91,29 +88,29 @@
         <div class="card-footer">
             <ul>
                 <li>
-                    <div class="text-muted">Visits</div>
-                    <strong>29.703 Users (40%)</strong>
+                    <div class="text-muted">Shares</div>
+                    <strong>2970 Users (40%)</strong>
                     <div class="progress progress-xs mt-h">
                         <div class="progress-bar bg-success" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </li>
                 <li class="hidden-sm-down">
-                    <div class="text-muted">Unique</div>
-                    <strong>24.093 Users (20%)</strong>
+                    <div class="text-muted">Invites</div>
+                    <strong>2409 Users (20%)</strong>
                     <div class="progress progress-xs mt-h">
                         <div class="progress-bar bg-info" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </li>
                 <li>
-                    <div class="text-muted">Pageviews</div>
-                    <strong>78.706 Views (60%)</strong>
+                    <div class="text-muted">Favourites</div>
+                    <strong>787 (60%)</strong>
                     <div class="progress progress-xs mt-h">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </li>
                 <li class="hidden-sm-down">
-                    <div class="text-muted">New Users</div>
-                    <strong>22.123 Users (80%)</strong>
+                    <div class="text-muted">Follows</div>
+                    <strong>221 Users (80%)</strong>
                     <div class="progress progress-xs mt-h">
                         <div class="progress-bar bg-danger" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
@@ -221,34 +218,8 @@
                 <div class="card-block">
                     <div class="row">
                         <div class="col-sm-12 col-lg-4">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="callout callout-info">
-                                        <small class="text-muted">New Clients</small>
-                                        <br>
-                                        <strong class="h4">9,123</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData1" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartInfo" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                                <div class="col-sm-6">
-                                    <div class="callout callout-danger">
-                                        <small class="text-muted">Recuring Clients</small>
-                                        <br>
-                                        <strong class="h4">22,643</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData2" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartDanger" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                            </div>
-                            <!--/.row-->
-                            <hr class="mt-0">
+                           
+
                             <ul class="horizontal-bars">
                                 <li>
                                     <div class="title">
@@ -351,34 +322,8 @@
                         </div>
                         <!--/.col-->
                         <div class="col-sm-6 col-lg-4">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="callout callout-warning">
-                                        <small class="text-muted">Pageviews</small>
-                                        <br>
-                                        <strong class="h4">78,623</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData1" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartWarning" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                                <div class="col-sm-6">
-                                    <div class="callout callout-success">
-                                        <small class="text-muted">Organic</small>
-                                        <br>
-                                        <strong class="h4">49,123</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData2" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartSuccess" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                            </div>
-                            <!--/.row-->
-                            <hr class="mt-0">
+                            
+                            
                             <ul class="horizontal-bars type-2">
                                 <li>
                                     <i class="icon-user"></i>
@@ -457,34 +402,8 @@
                         </div>
                         <!--/.col-->
                         <div class="col-sm-6 col-lg-4">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="callout">
-                                        <small class="text-muted">CTR</small>
-                                        <br>
-                                        <strong class="h4">23%</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData1" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartDefault" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                                <div class="col-sm-6">
-                                    <div class="callout callout-primary">
-                                        <small class="text-muted">Bounce Rate</small>
-                                        <br>
-                                        <strong class="h4">5%</strong>
-                                        <div class="chart-wrapper" style="width:100px;height:30px;">
-                                            <canvas baseChart class="chart" [datasets]="sparklineChartData2" [labels]="sparklineChartLabels" [options]="sparklineChartOptions" [colors]="sparklineChartPrimary" [legend]="sparklineChartLegend" [chartType]="sparklineChartType" (chartHover)="chartHovered($event)"
-                                            (chartClick)="chartClicked($event)"></canvas>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--/.col-->
-                            </div>
-                            <!--/.row-->
-                            <hr class="mt-0">
+                           
+                          
                             <ul class="icons-list">
                                 <li>
                                     <i class="icon-screen-desktop bg-primary"></i>

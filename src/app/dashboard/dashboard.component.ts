@@ -236,29 +236,39 @@ export class DashboardComponent implements OnInit {
   public mainChartData1:Array<number> = [];
   public mainChartData2:Array<number> = [];
   public mainChartData3:Array<number> = [];
+  public mainChartData4:Array<number> = [];
+  public mainChartData5:Array<number> = [];
 
   public mainChartData:Array<any> = [
     {
       data: this.mainChartData1,
-      label: 'Current'
+      label: 'Invites'
     },
     {
       data: this.mainChartData2,
-      label: 'Previous'
+      label: 'Shares'
     },
     {
       data: this.mainChartData3,
-      label: 'BEP'
+      label: 'Follows'
+    },
+    {
+      data: this.mainChartData4,
+      label: 'Favourites'
+    },
+    {
+      data: this.mainChartData5,
+      label: 'Comments'
     }
   ];
-  public mainChartLabels:Array<any> = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Thursday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+  public mainChartLabels:Array<any> = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30'];
   public mainChartOptions:any = {
     responsive: true,
     maintainAspectRatio: false,
     scales: {
       xAxes: [{
         gridLines: {
-          drawOnChartArea: false,
+          drawOnChartArea: true,
         },
         ticks: {
           callback: function(value:any) {
@@ -287,7 +297,7 @@ export class DashboardComponent implements OnInit {
       }
     },
     legend: {
-      display: false
+      display: true
     }
   };
   public mainChartColours:Array<any> = [
@@ -306,10 +316,24 @@ export class DashboardComponent implements OnInit {
       borderColor: this.brandDanger,
       pointHoverBackgroundColor: '#fff',
       borderWidth: 1,
-      borderDash: [8, 5]
+    //  borderDash: [8, 5]
+  },
+  { //brandPrimary
+      backgroundColor: 'transparent',
+      borderColor: this.brandPrimary,
+      pointHoverBackgroundColor: '#fff',
+      borderWidth: 1,
+    //  borderDash: [8, 5]
+  },
+  { //brandWarning
+      backgroundColor: 'transparent',
+      borderColor: this.brandWarning,
+      pointHoverBackgroundColor: '#fff',
+      borderWidth: 1,
+    //  borderDash: [8, 5]
     }
   ];
-  public mainChartLegend:boolean = false;
+  public mainChartLegend:boolean = true;
   public mainChartType:string = 'line';
 
   // social box charts
@@ -465,7 +489,8 @@ export class DashboardComponent implements OnInit {
     for (var i = 0; i <= this.mainChartElements; i++) {
       this.mainChartData1.push(this.random(50,200));
       this.mainChartData2.push(this.random(80,100));
-      this.mainChartData3.push(65);
+      this.mainChartData3.push(this.random(65,90));
+      this.mainChartData4.push(this.random(80,180));
     }
   }
 }
