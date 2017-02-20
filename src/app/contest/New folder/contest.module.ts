@@ -7,18 +7,14 @@ import { SpecialComponent } from './special.component';
 import { WinnersComponent } from './winners.component';
 import { ContestRoutingModule } from './contest-routing.module';
 import { DataTableModule } from 'angular-2-data-table';
-import {AddcontestComponent} from'./addcontest.component'
-import {AddspcontestComponent} from'./addspcontest.compontent'
 @NgModule({
-  imports: [  ContestRoutingModule,DataTableModule ],
+  imports: [  ContestRoutingModule, DataTableModule ],
   declarations: [
     MainComponent,
     SpecialComponent,
     PrizesComponent,
     RulesComponent,
-    WinnersComponent,
-    AddcontestComponent,
-    AddspcontestComponent,
+    WinnersComponent
   ]
 })
 export class ContestModule{ }

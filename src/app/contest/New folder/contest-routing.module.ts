@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { MainComponent } from './main.component';
 import { PrizesComponent } from './prizes.component';
 import { RulesComponent } from './rules.component';
 import { SpecialComponent } from './special.component';
 import { WinnersComponent } from './winners.component';
-import {AddcontestComponent} from './addcontest.component';
-import {AddspcontestComponent} from './addspcontest.compontent'
 
 
 const routes: Routes = [
@@ -49,20 +48,6 @@ const routes: Routes = [
         component: RulesComponent,
         data: {
           title: 'Rules'
-        }
-      },
-       {
-        path: 'addcontest',
-        component: AddcontestComponent,
-        data: {
-          title: 'Add Contest'
-        }
-      },
-       {
-        path: 'addspcontest',
-        component: AddspcontestComponent,
-        data: {
-          title: 'Add Special-Contest'
         }
       }
     ]

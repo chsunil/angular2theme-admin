@@ -2,7 +2,7 @@
     <div class="col-md-2 pull-right"><button class="btn btn-primary btn-sm" type="button">Create New Contest</button></div>
     <div class="col-md-12">
         <div style="margin: auto; max-width: 1000px; margin-top:50px">
-            <data-table id="films-grid" headerTitle="All Main Contests" [items]="films" [itemCount]="filmCount" (reload)="reloadFilms($event)" 
+            <data-table id="films-grid" headerTitle="All Special Contests" [items]="films" [itemCount]="filmCount" (reload)="reloadFilms($event)" 
                 [sortBy]="'nextruns'" [sortAsc]="false" [selectColumn]="true" [multiSelect]="false" [substituteRows]="false" [expandableRows]="true"
                 [translations]="translations"  [selectOnRowClick]="true">
                 <template #dataTableExpand let-item="item">
@@ -17,8 +17,7 @@
                 <data-table-column [property]="'actions'" [header]="'Actions'">
                   
                 </data-table-column>
-                </data-table>
-                
+                </data-table>            
         </div>
     </div>
 </div>

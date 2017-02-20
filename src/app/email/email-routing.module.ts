@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { RegisterComponent } from './register.component';
 import { ForgotpasswordComponent } from './forgotpassword.component';
 import { PasswordchangeComponent } from './passwordchange.component';
+import { InvitefriendsComponent } from './invitefriends.component';
+import { UpdateprofileComponent } from './updateprofile.component';
+import { VideoflagComponent } from './videoflag.component';
 
 const routes: Routes = [
   {
@@ -25,8 +28,36 @@ const routes: Routes = [
         data: {
           title: 'ForgotpasswordComponent Email'
         }
-      }
-     
+      },
+      {
+        path: 'passwordchange',
+        component: PasswordchangeComponent,
+        data: {
+          title: 'passwordchange Email'
+        }
+      },
+      {
+        path: 'invitefriends',
+        component: InvitefriendsComponent,
+        data: {
+          title: 'invitefriends Email'
+        }
+      },
+      {
+        path: 'updateprofile',
+        component: UpdateprofileComponent,
+        data: {
+          title: 'updateprofile Email'
+        }
+      },
+      {
+        path: 'videoflag',
+        component: VideoflagComponent,
+        data: {
+          title: 'videoflag Email'
+        }
+      },
+
     ]
   }
 ];
@@ -35,4 +66,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class EmailRoutingModule {}
+export class EmailRoutingModule { }

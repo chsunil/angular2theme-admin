@@ -117,7 +117,7 @@
                     </ul>
                 </li>
                 <!-- Email Templates page -->
-                <li class="nav-item nav-dropdown">
+                <li class="nav-item nav-dropdown" routerLinkActive="open">
                     <a class="nav-link nav-dropdown-toggle" href="#"> <i class="fa fa-envelope-open-o" aria-hidden="true"></i> Email Templates</a>
                     <ul class="nav-dropdown-items">
                         <li class="nav-item">
@@ -127,7 +127,16 @@
                             <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/forgotpassword']">  Forgotpassword</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/passwordchange']">  Password change</a>
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/passwordchange']">  Password Change</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/invitefriends']">  invitefriends</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/updateprofile']">  updateprofile </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/email/videoflag']">  videoflag </a>
                         </li>
                     </ul>
                 </li>
