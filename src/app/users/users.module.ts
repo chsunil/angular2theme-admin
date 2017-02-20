@@ -6,10 +6,10 @@ import { UsersRoutingModule } from './users-routing.module';
 import { DataTableModule } from 'angular-2-data-table';
 
 @NgModule({
-  imports: [ UsersRoutingModule,DataTableModule ],
+  imports: [UsersRoutingModule,DataTableModule],
   declarations: [
     AllusersComponent,
-    AdduserComponent,
+    AdduserComponent
   ]
 })
 export class UsersModule { }

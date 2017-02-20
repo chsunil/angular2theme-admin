@@ -9,7 +9,7 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Email Template changes'
+      title: 'Email Templates'
     },
     children: [
       {

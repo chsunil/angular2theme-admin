@@ -12,14 +12,14 @@ import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
 
+
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 
 // Layouts
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
-// Import Angular2 plugin.
-import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
+
 
 
 @NgModule({
@@ -30,8 +30,7 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular2-froala-wysiwyg';
     DropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot()
+   
     
   ],
   declarations: [
