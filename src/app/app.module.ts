@@ -11,8 +11,12 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { SIDEBAR_TOGGLE_DIRECTIVES } from './shared/sidebar.directive';
 import { AsideToggleDirective } from './shared/aside.directive';
 import { BreadcrumbsComponent } from './shared/breadcrumb.component';
-
-
+import { DashboardModule } from './dashboard/dashboard.module';
+import { ContestModule } from './contest/contest.module';
+import { EmailModule } from './email/email.module';
+import { SettingsModule } from './settings/settings.module';
+import { UsersModule } from './users/users.module';
+import { VideosModule } from './videos/videos.module';
 // Routing Module
 import { AppRoutingModule } from './app.routing';
 
@@ -20,13 +24,16 @@ import { AppRoutingModule } from './app.routing';
 import { FullLayoutComponent } from './layouts/full-layout.component';
 import { SimpleLayoutComponent } from './layouts/simple-layout.component';
 
-
-
 @NgModule({
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    DashboardModule,
+    ContestModule,
+    EmailModule,
+    SettingsModule,
+    UsersModule,
+    VideosModule,
     DropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
