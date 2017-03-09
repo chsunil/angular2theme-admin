@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+     "conteststatus": "",
+      "contestname": "Weekly Contest",
+      "contestduration": "",
+      "contestcategories": "All",
+      "action": ""
+    }, 
+    {
+     "conteststatus": "",
+      "contestname": "Monthly Contest",
+      "contestduration": "",
+      "contestcategories": "Fails",
+      "action": ""
+    },
+    {
+     "conteststatus": "",
+      "contestname": "Daily Contest ",
+      "contestduration": "",
+      "contestcategories": "Sports",
+      "action": ""
+    },
+    {
+     "conteststatus": "",
+      "contestname": "Yearly Contest ",
+      "contestduration": "",
+      "contestcategories": "All",
+      "action": ""
+    }
+     
+     
+  ]
+}

@@ -1,0 +1,277 @@
+<div class="animated">
+    <div class="card" id="new">
+        <div class="card-header">
+            <div class="row">
+                <div class="clo-sm-4">
+                    <label class="form-control-label" for="select">Select Role and change its capabilities</label></div>
+                <div class="col-md-3">
+                    <select id="select" name="select" class="form-control" size="1">
+                                    <option value="0">Please select</option>
+                                    <option value="1">SEO Team</option>
+                                    <option value="2">Excutive Team</option>
+                                    <option value="3">Admin Team</option>
+                     </select>
+                </div>
+            </div>
+        </div>
+        <div class="card-block">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="lead text-center">Capabilities</div>
+                    <p>Analytics</p>
+                    <div class="col-md-12">
+                        <label class="checkbox-inline" for="inline-checkbox1">
+                                    <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">One
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox2">
+                                    <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2">Two
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox3">
+                                    <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">Three
+                                </label>
+                    </div>
+                    <p>Users</p>
+                    <div class="col-md-12">
+                        <label class="checkbox-inline" for="inline-checkbox1">
+                                    <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">create_users
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox2">
+                                    <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2"> delete_users
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox3">
+                                    <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">edit_users
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox1">
+                                    <input type="checkbox" id="inline-checkbox1" name="inline-checkbox1" value="option1">list_users
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox2">
+                                    <input type="checkbox" id="inline-checkbox2" name="inline-checkbox2" value="option2"> promote_users
+                                </label>
+                        <label class="checkbox-inline" for="inline-checkbox3">
+                                    <input type="checkbox" id="inline-checkbox3" name="inline-checkbox3" value="option3">users_roles_access
+                                </label>
+                    </div>
+                </div>
+                <div class="col-md-3 pull-right">
+                    <div style="background: #eee; padding: 10px">
+                        <button type="button" class="btn-block btn-primary" data-toggle="modal" (click)="infoModal.show()">Update</button>
+                        <button type="button" class="btn-block btn-secondary" data-toggle="modal" (click)="myModal.show()">Add Role</button>
+                        <button type="button" class="btn-block btn-secondary"  data-toggle="modal" (click)="largeModal.show()">Rename Role</button>
+                        <button type="button" class="btn-block btn-secondary"  data-toggle="modal" (click)="smallModal.show()">Delete Role</button> 
+                        <button type="button" class="btn-block btn-secondary" data-toggle="modal" (click)="primaryModal.show()">Add Capabilitie</button>
+                        <button type="button" class="btn-block btn-secondary"  data-toggle="modal" (click)="successModal.show()">Delete Capabilitie</button> 
+                        <button type="button" class="btn-block btn-danger" data-toggle="modal" (click)="dangerModal.show()">Reset</button> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-footer">footer</div>
+    </div>
+    <div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Add User Role</h4>
+                    <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="roleid">Role name (ID)</label> </div>
+                        <div class=" col-md-8"><input name="roleid" class="form-control" /></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="rolename">Display Role Name</label> </div>
+                        <div class=" col-md-8"><input name="rolename" class="form-control" /></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="copy">Make copy of</label> </div>
+                        <div class=" col-md-8">
+                            <select class="form-control" id="copy">
+                                <option>Role 1</option>
+                                <option>Role 2</option>
+                                <option>Role 3</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" (click)="myModal.hide()">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal add role-->
+    <div bsModal #largeModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Rename Role</h4>
+                <button type="button" class="close" (click)="largeModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+             <div class="modal-body">
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="roleid">Role name (ID)</label> </div>
+                        <div class=" col-md-8"><input name="roleid" class="form-control" value="SEO Team"  disabled/></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="rolename">Display Role Name</label> </div>
+                        <div class=" col-md-8"><input name="rolename" class="form-control" /></div>
+                    </div>
+                
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="largeModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal Rename -->
+
+<div bsModal #smallModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Role</h4>
+                <button type="button" class="close" (click)="smallModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                  <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="copy">Selet Role To Delete</label> </div>
+                        <div class=" col-md-8">
+                            <select class="form-control" id="copy">
+                                <option>Role 1</option>
+                                <option>Role 2</option>
+                                <option>Role 3</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="smallModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal Delete ROle -->
+<div bsModal #primaryModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Capabilitie</h4>
+                <button type="button" class="close" (click)="primaryModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="capid">Capabilitie name (ID)</label> </div>
+                        <div class=" col-md-8"><input name="capid" class="form-control" /></div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="primaryModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- /.modal add cap-->
+<div bsModal #successModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Capabilitie</h4>
+                <button type="button" class="close" (click)="successModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                 <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="copy">Selet Capabilitie To Delete</label> </div>
+                        <div class=" col-md-8">
+                            <select class="form-control" id="copy">
+                                <option>Cap 1</option>
+                                <option>Cap 2</option>
+                                <option>Cap 3</option>
+                            </select>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="successModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- modal del Capabilitie -->
+<div bsModal #dangerModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Reset </h4>
+                <button type="button" class="close" (click)="dangerModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to discard changes </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="dangerModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Discard changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<!-- modal -->
+<div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Udate</h4>
+                <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure to want to save changes</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

@@ -1,0 +1,98 @@
+<div class="parent">
+    <div class='wrapper row'>
+        <div class='container col-md-6'>
+            <div class="card">
+                <div class="card-header">
+                    Countries
+                    <span class="float-right"> 
+                        <button type="button" class="btn-primary" data-toggle="modal" (click)="infoModal.show()">Add Country</button>
+                        </span>
+
+                </div>
+                <div class="card-block" [dragula]='"fifth-bag"'>
+                    <div> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                        laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+                        ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</div>
+                </div>
+            </div>
+        </div>
+        <div class='container col-md-6'>
+            <div class="card">
+                <div class="card-header">
+                    Languages
+                    <span class="float-right"> 
+                        <button type="button" class="btn-primary" data-toggle="modal" (click)="langModal.show()">Add Language</button>
+                        </span>
+                </div>
+                <div class="card-block" [dragula]='"fifth-bag"'>
+                    <div>1st div</div>
+                    <div>4st div</div>
+                    <div>3st div</div>
+                    <div>2st div</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<div bsModal #infoModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Country</h4>
+                <button type="button" class="close" (click)="infoModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="countryid">Country ID</label> </div>
+                        <div class=" col-md-8"><input name="countryid" class="form-control" /></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="countryname">Country Name</label> </div>
+                        <div class=" col-md-8"><input name="countryname" class="form-control" /></div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="infoModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+<div bsModal #langModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Add Language</h4>
+                <button type="button" class="close" (click)="langModal.hide()" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+               <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="languageid">Language ID</label> </div>
+                        <div class=" col-md-8"><input name="languageid" class="form-control" /></div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-md-4 form-control-label">
+                            <label for="languagename">Language Name</label> </div>
+                        <div class=" col-md-8"><input name="languagename" class="form-control" /></div>
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="langModal.hide()">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>

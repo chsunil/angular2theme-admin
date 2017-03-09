@@ -1,0 +1,70 @@
+<div class="animated fadeIn col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <strong>Edit Contest</strong>
+        </div>
+        <div class="card-block">
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="nf-email"><strong>Name</strong></label>
+                    <input type="text" id="nf-email" name="nf-email" class="form-control" placeholder="Enter name">
+                    <!--<span class="help-block">Please enter your email</span>-->
+                </div>
+
+                <div class="form-group row">
+                    <label class="col-md-12 form-control-label" for="textarea-input"><strong>Description</strong></label>
+                    <div class="col-md-12">
+                        <textarea id="textarea-input" name="textarea-input" rows="9" class="form-control" placeholder="Content.."></textarea>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-12 form-control-label" for="file-input"><strong>Thumbnail</strong></label>
+                    <div class="col-md-12">
+                        <input type="file" id="file-input" name="file-input">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-12 form-control-label"><strong>Status:</strong></label>
+                    <div class="col-md-12">
+                        <label class="radio-inline" for="inline-radio1">
+                                    <input type="radio" id="inline-radio1" name="inline-radios" value="option1" checked> <strong>Active   </strong>
+                                    </label>
+                        <label class="radio-inline" for="inline-radio2">
+                                    <input type="radio" id="inline-radio2" name="inline-radios" value="option2"><strong>Inactive</strong>
+                                </label>
+
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-12 form-control-label" for="select"><strong>Contest Type:</strong></label>
+                    <div class="col-md-12">
+                        <select id="select" name="select" class="form-control input-sm" size="1">
+                                    <option value="0">Please select</option>
+                                    <option value="1">Weekly</option>
+                                    <option value="2">Monthly</option>
+                                    
+                                </select>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-md-12 form-control-label"><strong>Winner Selection:
+</strong></label>
+                    <div class="col-md-12">
+                        <label class="radio-inline" for="inline-radio1">
+                                    <input type="radio" id="inline-radio1" name="inline-radiosw" value="option1" checked> <strong>Auto  </strong>
+
+                                </label>
+                        <label class="radio-inline" for="inline-radio2">
+                                    <input type="radio" id="inline-radio2" name="inline-radiosw" value="option2"><strong>Manual</strong>
+                                </label>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer pull-right">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Save</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="animated fadeIn">
+    <div id="maincontest" class="tab-pane">
+        <div class="card-header">
+            <a class="nav-link" routerLinkActive="active" [routerLink]="['/contest/addcontest']"><button type="button" class="btn btn-primary pull-right">Create new Contest</button></a>
+            <strong><h5>All Special Contests</h5></strong>
+           </div>
+        <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+            <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+            <input #gb type="text" pInputText size="50" placeholder="Search in table">
+        </div>
+            <p-dataTable [value]="spcontest" [rows]="10" [paginator]="true" [pageLinks]="2" [globalFilter]="gb" expandableRows="true"
+            sortMode="multiple">
+            <p-column styleClass="col-icon" field="conteststatus" header="Contest Status" [sortable]="true"> </p-column>
+            <p-column field="contestname" header="Contest name" [sortable]="true"></p-column>
+            <p-column field="contestduration" header="Contest Duration" [sortable]="true"></p-column>
+            <p-column field="contestcategories" header="Categories" [sortable]="true"></p-column>
+            <p-column styleClass="col-button">
+                <template let-car="rowData" pTemplate="body">
+                    <a href="#" class="btn primary " routerLinkActive="active" [routerLink]="['/contest/viewcontest']"><i class="fa fa-folder"></i>View</a>
+                    <a [routerLink]="['/contest/addcontest']">
+                        <i class="fa fa-pencil"></i> Edit </a>
+                </template>
+            </p-column>
+            <template let-car pTemplate="rowexpansion">
+                <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
+                    <div class="ui-grid-row">
+                    </div>
+                </div>
+            </template>
+            </p-dataTable>
+    </div>
+</div>

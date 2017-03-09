@@ -1,0 +1,60 @@
+ <div id="allusers" class="tab-pane" >
+     <div class="card-header">
+         <a class="nav-link" routerLinkActive="active" [routerLink]="['/users/adduser']"> <button type="button" class="btn btn-primary pull-right">Add a New User</button></a>
+       <h5>All users</h5>
+         </div>
+<div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+ <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+ <input #gb type="text" pInputText size="50" placeholder="Search in table">
+  </div>
+  
+    <p-dataTable [value]="alluserdataDetailsa" [rows]="10" [paginator]="true" [pageLinks]="2" [globalFilter]="gb" 
+    expandableRows="true" sortMode="multiple">
+    <p-column expander="true" styleClass="col-icon" ></p-column>
+    <p-column field="username"  header="User name" [sortable]="true"></p-column>
+    <p-column field="email" header="Email" [sortable]="true"></p-column>
+    <p-column field="role" header="Role" [sortable]="true"></p-column>
+      <p-column styleClass="col-button">
+        <template let-car="rowData" pTemplate="body" >
+            <a href=""  class="btn btn-sm btn-info " style="margin-bottom: 4px" type="button">Suspend </a>
+                 <a href="" class="btn btn-danger btn-sm" style="margin-bottom: 4px" type="button">Delete </a>
+        </template>
+    </p-column>
+    
+    <template let-car pTemplate="rowexpansion" >
+            <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
+            <div class="ui-grid-row">
+              <!--  <div class="ui-grid-col-3" style="text-align:center">
+                    <i class="fa fa-search" (click)="showCar(car)" style="cursor:pointer;float:left;margin-top:40px"></i>
+                    <img src="showcase/resources/demo/images/car/{{car.brand}}-big.gif">
+                </div>-->
+                <div class="ui-grid-col-9" >
+                    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2 label">Country: </div>
+                            <div class="ui-grid-col-10">{{car.country}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2 label">Total number of Follows: </div>
+                            <div class="ui-grid-col-10">{{car.totalfollows}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2 label">Total number of Shares: </div>
+                            <div class="ui-grid-col-10">{{car.tshares}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2 label">Total number of Favorites: </div>
+                            <div class="ui-grid-col-10">{{car.tfavorites}}</div>
+                        </div>
+                         <div class="ui-grid-row">
+                            <div class="ui-grid-col-2 label">Total number of Comments: </div>
+                            <div class="ui-grid-col-10">{{car.tcomments}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</p-dataTable>
+  </div>
+  

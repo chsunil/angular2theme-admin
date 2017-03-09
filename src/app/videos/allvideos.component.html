@@ -1,0 +1,56 @@
+<div class="animated fadeIn">
+    <div id="allvideos" class="tab-pane">
+        <div class="card-header">
+            <h5>All Videos</h5>
+        </div>
+        <div class="ui-widget-header" style="padding:4px 10px;border-bottom: 0 none">
+            <i class="fa fa-search" style="margin:4px 4px 0 0"></i>
+            <input #gb type="text" pInputText size="50" placeholder="Search in table">
+        </div>
+        <p-dataTable [value]="allvideoDetails" [rows]="10" [paginator]="true" [pageLinks]="2" [globalFilter]="gb" expandableRows="true"
+            sortMode="multiple">
+            <p-column expander="true" styleClass="col-icon"></p-column>
+            <p-column field="videotitle" header="Video Title" [sortable]="true"></p-column>
+            <p-column field="user" header="User" [sortable]="true"></p-column>
+            <p-column field="date" header="Date" [sortable]="true"></p-column>
+             <p-column styleClass="col-button">
+                <template let-car="rowData" pTemplate="body">
+                    <a href=""  class="btn btn-sm  " ><i class="fa fa-times text-danger"></i> </a>
+                      <a href="" class="btn  btn-sm" ><i class="fa fa-pause text-warning"></i></a>
+                </template>
+            </p-column>
+            <template let-car pTemplate="rowexpansion">
+                <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px">
+                    <div class="ui-grid-row">
+                        <!--  <div class="ui-grid-col-3" style="text-align:center">
+                    <i class="fa fa-search" (click)="showCar(car)" style="cursor:pointer;float:left;margin-top:40px"></i>
+                    <img src="showcase/resources/demo/images/car/{{car.brand}}-big.gif">
+                </div>-->
+                        <div class="ui-grid-col-9">
+                            <div class="ui-grid ui-grid-responsive ui-grid-pad">
+                                <div class="ui-grid-row">
+                                    <div class="ui-grid-col-2 label">Follows: </div>
+                                    <div class="ui-grid-col-10">{{car.follows}}</div>
+                                </div>
+
+                                <div class="ui-grid-row">
+                                    <div class="ui-grid-col-2 label"> Shares: </div>
+                                    <div class="ui-grid-col-10">{{car.shares}}</div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-grid-col-2 label"> Favorites: </div>
+                                    <div class="ui-grid-col-10">{{car.favorites}}</div>
+                                </div>
+                                <div class="ui-grid-row">
+                                    <div class="ui-grid-col-2 label"> Comments: </div>
+                                    <div class="ui-grid-col-10">{{car.comments}}</div>
+                                </div>
+                              
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </template>
+            </p-dataTable>
+    </div>
+</div>
